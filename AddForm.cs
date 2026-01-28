@@ -23,7 +23,7 @@ namespace Assignment3._4
             comboClass.DataSource = Enum.GetValues(typeof(Classes));
         }
 
-        private void txtEid_Validating(object sender, CancelEventArgs e)
+        private void txtSid_Validating(object sender, CancelEventArgs e)
         {
             if (txtSid.TextLength != 0) // data is entered
             {
@@ -45,7 +45,7 @@ namespace Assignment3._4
             }
         }
 
-        private void txtSalary_Validating(object sender, CancelEventArgs e)
+        private void txtTution_Validating(object sender, CancelEventArgs e)
         {
             if (txtTuition.TextLength != 0)
             {
@@ -59,24 +59,6 @@ namespace Assignment3._4
             }
 
         }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            if (txtSid.Text != string.Empty && txtName.Text != string.Empty)
-            {
-                var newEmp = new Student();
-                newEmp.StudentID = int.Parse(txtSid.Text);
-                newEmp.Name = txtName.Text;
-                newEmp.Tuition = double.Parse(txtTuition.Text);
-                newEmp.Classes = (Classes)(comboClass.SelectedIndex + 1);
-                Data.Students.Add(newEmp);
-                MessageBox.Show("Record added!");
-
-
-            }
-
-        }
-
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
             if (txtSid.Text != string.Empty && txtName.Text != string.Empty)

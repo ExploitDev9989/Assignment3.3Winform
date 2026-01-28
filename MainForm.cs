@@ -41,13 +41,6 @@ namespace Assignment3._4
             AddForm addForm = new AddForm();
             addForm.ShowDialog();
         }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            stuGrid.DataSource = null;
-            stuGrid.DataSource = Data.Students;
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

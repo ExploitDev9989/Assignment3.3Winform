@@ -14,9 +14,9 @@ namespace Assignment3._4
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtuser.Text == "m" && txtpass.Text == "m")
+            if (txtuser.Text == "User" && txtpass.Text == "Password")
             {
-                MessageBox.Show("Welcome Miguel!");
+                MessageBox.Show("Welcome User!");
                 MainForm mainForm = new MainForm();
                 mainForm.Show();
                 this.Hide();
