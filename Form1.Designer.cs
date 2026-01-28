@@ -33,12 +33,11 @@
             txtuser = new TextBox();
             label1 = new Label();
             txtpass = new TextBox();
-            button1 = new Button();
             SuspendLayout();
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(138, 118);
+            btnLogin.Location = new Point(72, 117);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(109, 23);
             btnLogin.TabIndex = 1;
@@ -75,22 +74,12 @@
             txtpass.Size = new Size(258, 23);
             txtpass.TabIndex = 4;
             // 
-            // button1
-            // 
-            button1.Location = new Point(23, 118);
-            button1.Name = "button1";
-            button1.Size = new Size(109, 23);
-            button1.TabIndex = 5;
-            button1.Text = "Forgot Password";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(282, 241);
-            Controls.Add(button1);
             Controls.Add(txtpass);
             Controls.Add(label1);
             Controls.Add(txtuser);
@@ -108,6 +97,5 @@
         private TextBox txtuser;
         private Label label1;
         private TextBox txtpass;
-        private Button button1;
     }
 }
