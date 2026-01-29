@@ -63,14 +63,31 @@ namespace Assignment3._4
         {
             if (txtSid.Text != string.Empty && txtName.Text != string.Empty)
             {
-                var newEmp = new Student();
-                newEmp.StudentID = int.Parse(txtSid.Text);
-                newEmp.Name = txtName.Text;
-                newEmp.Tuition = double.Parse(txtTuition.Text);
-                newEmp.Classes = (Classes)(comboClass.SelectedIndex + 1);
-                Data.Students.Add(newEmp);
+                var newStu = new Student();
+                newStu.StudentID = int.Parse(txtSid.Text);
+                newStu.Name = txtName.Text;
+                newStu.Tuition = double.Parse(txtTuition.Text);
+                newStu.Classes = (Classes)(comboClass.SelectedIndex + 1);
+                newStu.Admission = txtadmin.Text;
+
+                Data.Students.Add(newStu);
                 MessageBox.Show("Record added!");
             }
+        }
+
+        private void txtTuition_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtadmin_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            label5 = new Label();
+            txtadmin = new TextBox();
             btnAdd = new Button();
             txtSid = new TextBox();
             txtName = new TextBox();
@@ -43,6 +45,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(txtadmin);
             groupBox1.Controls.Add(btnAdd);
             groupBox1.Controls.Add(txtSid);
             groupBox1.Controls.Add(txtName);
@@ -59,6 +63,23 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Student Record";
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(3, 168);
+            label5.Name = "label5";
+            label5.Size = new Size(116, 15);
+            label5.TabIndex = 10;
+            label5.Text = "Month of Admission";
+            // 
+            // txtadmin
+            // 
+            txtadmin.Location = new Point(125, 168);
+            txtadmin.Name = "txtadmin";
+            txtadmin.Size = new Size(213, 23);
+            txtadmin.TabIndex = 9;
+            txtadmin.TextChanged += txtadmin_TextChanged;
+            // 
             // btnAdd
             // 
             btnAdd.Location = new Point(112, 285);
@@ -71,14 +92,14 @@
             // 
             // txtSid
             // 
-            txtSid.Location = new Point(112, 58);
+            txtSid.Location = new Point(125, 58);
             txtSid.Name = "txtSid";
             txtSid.Size = new Size(213, 23);
             txtSid.TabIndex = 7;
             // 
             // txtName
             // 
-            txtName.Location = new Point(112, 90);
+            txtName.Location = new Point(125, 90);
             txtName.Name = "txtName";
             txtName.Size = new Size(213, 23);
             txtName.TabIndex = 6;
@@ -86,17 +107,18 @@
             // comboClass
             // 
             comboClass.FormattingEnabled = true;
-            comboClass.Location = new Point(112, 168);
+            comboClass.Location = new Point(112, 226);
             comboClass.Name = "comboClass";
             comboClass.Size = new Size(121, 23);
             comboClass.TabIndex = 5;
             // 
             // txtTuition
             // 
-            txtTuition.Location = new Point(112, 126);
+            txtTuition.Location = new Point(125, 126);
             txtTuition.Name = "txtTuition";
             txtTuition.Size = new Size(213, 23);
             txtTuition.TabIndex = 4;
+            txtTuition.TextChanged += txtTuition_TextChanged;
             // 
             // label4
             // 
@@ -106,11 +128,12 @@
             label4.Size = new Size(89, 15);
             label4.TabIndex = 3;
             label4.Text = "Student Tuition";
+            label4.Click += label4_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(6, 171);
+            label3.Location = new Point(34, 229);
             label3.Name = "label3";
             label3.Size = new Size(34, 15);
             label3.TabIndex = 2;
@@ -161,5 +184,7 @@
         private TextBox txtName;
         private ComboBox comboClass;
         private TextBox txtTuition;
+        private Label label5;
+        private TextBox txtadmin;
     }
 }

@@ -72,6 +72,7 @@
             stuGrid.Name = "stuGrid";
             stuGrid.Size = new Size(580, 316);
             stuGrid.TabIndex = 3;
+            stuGrid.CellContentClick += stuGrid_CellContentClick;
             // 
             // MainForm
             // 

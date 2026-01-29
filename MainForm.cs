@@ -59,5 +59,10 @@ namespace Assignment3._4
             stuGrid.DataSource = null;
             stuGrid.DataSource = Data.Students;
         }
+
+        private void stuGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
