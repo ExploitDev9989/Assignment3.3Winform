@@ -12,7 +12,8 @@ namespace Assignment3._4
         Python = 1,
         Ruby,
         HTML,
-        Javascript
+        Javascript,
+        French
     }
 
     enum MonthOfAdmission
