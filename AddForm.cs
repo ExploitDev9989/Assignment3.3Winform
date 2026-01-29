@@ -21,6 +21,7 @@ namespace Assignment3._4
         private void AddForm_Load(object sender, EventArgs e)
         {
             comboClass.DataSource = Enum.GetValues(typeof(Classes));
+            comboClass1.DataSource = Enum.GetValues(typeof(MonthOfAdmission));
         }
 
         private void txtSid_Validating(object sender, CancelEventArgs e)
@@ -68,7 +69,7 @@ namespace Assignment3._4
                 newStu.Name = txtName.Text;
                 newStu.Tuition = double.Parse(txtTuition.Text);
                 newStu.Classes = (Classes)(comboClass.SelectedIndex + 1);
-                newStu.Admission = txtadmin.Text;
+                newStu.Admission = (MonthOfAdmission)(comboClass1.SelectedIndex +1);
 
                 Data.Students.Add(newStu);
                 MessageBox.Show("Record added!");
@@ -86,6 +87,16 @@ namespace Assignment3._4
         }
 
         private void txtadmin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboClass_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
